@@ -12,7 +12,7 @@
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <script defer src=""></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body class="container">
@@ -21,18 +21,27 @@
         <section class="containerAdd">
             <h2 class="containerAdd__header">Add new task</h2>
             <form class="form">
-                <label for="#addButton">
-                    <input id="addButton" class="form__inputField" placeholder="What you want to do?">
-                </label>
-                <button class="form__button">Add to-do</button>
+                <input id="addButton" class="form__inputField" placeholder="What you want to do?">
+                <button class="form__button js-button">Add to-do</button>
             </form>
         </section>
         <section class="containerList">
             <h2 class="containerList__header">Task List</h2>
-            <div class="gridContainer">
-                <li>
+            <div class="gridContainer js-taskList">
+                
+                    <img class="image js-check" src="https://i.ibb.co/1zcGyN2/imageedit-3-5543426524.gif">
+                    <span class="addedTaskText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                        exercitationem,
+                        tempora cumque soluta nesciunt non. Rerum quod voluptatem quo inventore, sequi veniam numquam
+                        ipsa
+                        atque illo ea adipisci doloribus eos.</span>
+                <img class="image js-trash" src="https://i.ibb.co/tx3xzv3/trash.png">
+                <img class="image js-check" src="https://i.ibb.co/1zcGyN2/imageedit-3-5543426524.gif">
+                <span class="addedTaskText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem,
+                    tempora cumque soluta nesciunt non. Rerum quod voluptatem quo inventore, sequi veniam numquam ipsa
+                    atque illo ea adipisci doloribus eos.</span>
+                <img class="image js-trash" src="https://i.ibb.co/tx3xzv3/trash.png">
 
-                </li>
             </div>
         </section>
     </div>
