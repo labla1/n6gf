@@ -97,20 +97,50 @@ body {
     border-top: 2px solid #eee;
     padding: 20px;
     display: grid;
-    grid-auto-rows: minmax(100px, auto);
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto;
-    gap: 0 1px;
+    gap: 10px 5px;
     align-items: center;
-}
-
-.image {
-    height: 30px;
-    width: 30px;
-    max-width: 100%;
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .addedTaskText {
     padding: 5px;
+    word-break: break-all;
+}
+
+.gridContainer__checkButton {
+    background-color: hsl(120, 95%, 30%);
+    width: 35px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.gridContainer__checkButton:hover {
+    background-color: hsl(120, 95%, 35%);
+    transform: scale(1.1);
+}
+
+.gridContainer__checkButton:active {
+    background-color: hsl(120, 95%, 40%);
+}
+
+.gridContainer__removeButton {
+    background-color: hsl(0, 100%, 50%);
+    width: 35px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.gridContainer__removeButton:hover {
+    background-color: hsl(0, 100%, 40%);
+    transform: scale(1.1);
+}
+.gridContainer__removeButton:active {
+    background-color: hsl(0, 100%, 30%);
 }
