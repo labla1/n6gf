@@ -1,0 +1,72 @@
+.gridContainer {
+    border-top: 2px solid #eee;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    gap: 10px 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.containerAdd {
+    background: white;
+}
+
+.containerList {
+    background: white;
+    margin-top: 8px;
+}
+
+.containerAdd__header {
+    padding: 15px;
+    margin: 0px;
+}
+
+.containerList__header {
+    padding: 15px;
+    margin: 0px;
+}
+
+
+.addedTaskText {
+    padding: 5px;
+    word-break: break-all;
+}
+
+.gridContainer__checkButton {
+    background-color: hsl(120, 95%, 30%);
+    width: 35px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.gridContainer__checkButton:hover {
+    background-color: hsl(120, 95%, 35%);
+    transform: scale(1.1);
+}
+
+.gridContainer__checkButton:active {
+    background-color: hsl(120, 95%, 40%);
+}
+
+.gridContainer__removeButton {
+    background-color: hsl(0, 100%, 50%);
+    width: 35px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.gridContainer__removeButton:hover {
+    background-color: hsl(0, 100%, 40%);
+    transform: scale(1.1);
+}
+.gridContainer__removeButton:active {
+    background-color: hsl(0, 100%, 30%);
+}

@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after ::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 750px;
+    max-width: 100%;
+    margin: 100px auto;
+    background-color: #eeeeee;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.flexContainer {
+    margin: 0 15px 0 15px;
+}
+
+.flexContainer__header {
+    padding: 5px;
+}
+
