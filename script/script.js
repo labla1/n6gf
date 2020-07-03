@@ -17,7 +17,7 @@
 
         tasks.push({
             content: newTaskContent,
-           
+            done: false,
         });
         render();
     };
