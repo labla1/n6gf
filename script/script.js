@@ -2,16 +2,16 @@
     const tasks = [];
 
     const removeTaskButton = (index) => {
+
         tasks.splice(index, 1);
         render();
     }
 
     const toggleDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+
+        tasks[index].done = !tasks[index].done
         render();
     }
-
-
 
     const addNewTask = (newTaskContent) => {
 
@@ -39,21 +39,18 @@
         });
     }
 
-
-
-
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <button class="gridContainer__checkButton js-checkButton">
-            &#10004;
+            <button class="taskContainer__checkButton js-checkButton">
+            ${task.done ? "&#10004": ""}
             </button>
-                <span ${task.done ? "style=\"text-decoration: line-through\"" : ""} class="addedTaskText js-addedTaskTest">
+                <span class="addedTaskText js-addedTaskText ${task.done ? "taskContainer__checkButton--lineThrough" : ""}">
                 ${task.content}
                 </span>
-                <button class="gridContainer__removeButton js-removeButton">
+                <button class="taskContainer__removeButton js-removeButton">
                 &#10006;
                 </button>
             `;
@@ -61,9 +58,6 @@
         document.querySelector(".js-taskList").innerHTML = htmlString;
         bindEvents();
     };
-
-
-
 
     const onFormSubmit = (event) => {
 

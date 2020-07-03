@@ -21,11 +21,11 @@ body {
     font-family: "Noto Sans", sans-serif;
 }
 
-.flexContainer {
+.main {
     margin: 0 15px 0 15px;
 }
 
-.flexContainer__header {
+.main__header {
     padding: 5px;
 }
 
