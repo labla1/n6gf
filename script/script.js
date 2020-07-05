@@ -1,23 +1,27 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const removeTaskButton = (index) => {
-
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ];
         render();
     }
 
     const toggleDone = (index) => {
-
-        tasks[index].done = !tasks[index].done
+ 
+        tasks[index].done === !tasks[index].done
+   
         render();
     }
 
     const addNewTask = (newTaskContent) => {
 
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            {content: newTaskContent},
+        ];
         render();
     };
 
