@@ -2,34 +2,30 @@
     let tasks = [];
 
     const removeTaskButton = (index) => {
-        tasks = [
-            ...tasks.slice(0, index),
-            ...tasks.slice(index + 1),
-        ];
+
+        tasks.splice(index, 1);
         render();
     }
 
     const toggleDone = (index) => {
- 
-        tasks[index].done === !tasks[index].done
-   
+
+        tasks[index].done = !tasks[index].done
         render();
     }
 
     const addNewTask = (newTaskContent) => {
 
-        tasks = [
-            ...tasks,
-            {content: newTaskContent},
-        ];
+        tasks.push({
+            content: newTaskContent,
+        });
         render();
     };
 
     const bindEvents = () => {
-        const checkButtons = document.querySelectorAll(".js-checkButton");
+        const doneButtons = document.querySelectorAll(".js-checkButton");
 
-        checkButtons.forEach((checkButtons, index) => {
-            checkButtons.addEventListener("click", () => {
+        doneButtons.forEach((doneButtons, index) => {
+            doneButtons.addEventListener("click", () => {
                 toggleDone(index);
             });
         });
@@ -43,7 +39,7 @@
         });
     }
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -60,6 +56,24 @@
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
+    };
+
+    // const renderButtons = () => {
+        
+    //     let showButtons = "";
+    //     `
+    //     <button>fdssdfsdf</button>
+    //     <button>fdssdfsdf</button>
+    //     `
+    //     document.querySelector(".js-span").innerHTML = showButtons;
+        
+
+    //     };
+        
+
+    const render = () => {
+        // renderButtons();
+        renderTasks();
         bindEvents();
     };
 
