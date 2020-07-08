@@ -37,6 +37,11 @@ body {
     background: none;
     border: none;
     outline: none;
-    color: teal;
+    color: hsl(180, 100%, 25%);
     font-size: 14px;
+}
+
+.section__span--button:hover {
+    color: hsl(180, 100%, 35%);
+    text-decoration: underline;
 }

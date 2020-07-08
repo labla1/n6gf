@@ -1,6 +1,8 @@
 {
     let tasks = [];
 
+    let allTasksHidden = "";
+
     const removeTaskButton = (index) => {
 
         tasks.splice(index, 1);
@@ -39,10 +41,10 @@
         });
     };
 
-    const renderButtons = (htmlString) => {
+    const renderButtons = () => {
         let innerButtons = "";
 
-        if (htmlString) {
+        if (tasks.length) {
             innerButtons += `
             <button class="section__span--button">Hide done tasks</button>
             <button class="section__span--button">Mark all as done</button>
@@ -68,11 +70,15 @@
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
-        renderButtons(htmlString);
     };
+
+    const bindButtonEvents = () => {
+        
+    }
 
 
     const render = () => {
+        renderButtons();
         renderTasks();
         bindEvents();
     };
