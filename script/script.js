@@ -37,6 +37,18 @@
                 removeTaskButton(index);
             });
         });
+    };
+
+    const renderButtons = (htmlString) => {
+        let innerButtons = "";
+
+        if (htmlString) {
+            innerButtons += `
+            <button class="section__span--button">Hide done tasks</button>
+            <button class="section__span--button">Mark all as done</button>
+            `;
+        };
+        document.querySelector(".js-span").innerHTML = innerButtons;
     }
 
     const renderTasks = () => {
@@ -56,23 +68,11 @@
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
+        renderButtons(htmlString);
     };
 
-    // const renderButtons = () => {
-        
-    //     let showButtons = "";
-    //     `
-    //     <button>fdssdfsdf</button>
-    //     <button>fdssdfsdf</button>
-    //     `
-    //     document.querySelector(".js-span").innerHTML = showButtons;
-        
-
-    //     };
-        
 
     const render = () => {
-        // renderButtons();
         renderTasks();
         bindEvents();
     };

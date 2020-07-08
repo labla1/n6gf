@@ -29,3 +29,14 @@ body {
     padding: 5px;
 }
 
+.section__span {
+    margin-left: 340px;
+}
+
+.section__span--button {
+    background: none;
+    border: none;
+    outline: none;
+    color: teal;
+    font-size: 14px;
+}
