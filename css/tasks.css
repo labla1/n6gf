@@ -36,8 +36,6 @@
 
 .addedTaskText {
     padding: 5px;
-    word-break: break-all;
-    border-bottom: 2px solid #eee;
 }
 
 .taskContainer__checkButton {

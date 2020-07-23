@@ -53,6 +53,7 @@
 
     const toggleHideDoneTasksButton = () => {
         allTasksHidden = !allTasksHidden;
+        render();
     }
 
     const setAllDone = () => {
@@ -83,7 +84,7 @@
         if (tasks.length) {
             innerButtons += `
             <button class="section__span--button js-hideAllDoneButton">${allTasksHidden ? "Show" : "Hide"} done tasks</button>
-            <button class="section__span--button js-allDoneButton" ${tasks.every(({ done }) => done) ? " disabled" : ""}>
+            <button class="section__span--button js-allDoneButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Mark all as done</button>
             `;
         };
@@ -95,6 +96,7 @@
 
         for (const task of tasks) {
             htmlString += `
+            <div class="taskContainer ${task.done && allTasksHidden ? "task--hidden" : ""}">
             <button class="taskContainer__checkButton js-checkButton">
             ${task.done ? "&#10004" : ""}
             </button>
@@ -104,7 +106,7 @@
                 <button class="taskContainer__removeButton js-removeButton">
                 &#10006;
                 </button>
-                </span>
+                </div>
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
@@ -113,8 +115,9 @@
 
     const render = () => {
 
-        renderButtons();
         renderTasks();
+        renderButtons();
+        
         bindEvents();
         bindButtonEvents();
     };
