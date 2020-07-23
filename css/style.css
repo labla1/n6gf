@@ -29,9 +29,19 @@ body {
     padding: 5px;
 }
 
-.section__span {
-    margin-left: 340px;
+.section__top {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    justify-content: space-around;
 }
+
+@media (max-width: 750px) {
+    .section__top {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .section__span--button {
     background: none;
@@ -44,4 +54,8 @@ body {
 .section__span--button:hover {
     color: hsl(180, 100%, 35%);
     text-decoration: underline;
+}
+.section__span--button:disabled {
+    color: #ccc;
+    text-decoration: none !important;
 }
